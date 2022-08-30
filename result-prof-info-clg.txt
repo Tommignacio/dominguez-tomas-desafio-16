@@ -1,0 +1,1080 @@
+Statistical profiling result from info-clg-v8.log, (1853 ticks, 4 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     58    3.1%          /usr/lib/system/libsystem_pthread.dylib
+     43    2.3%          /usr/lib/system/libsystem_c.dylib
+     23    1.2%          /usr/lib/libc++.1.dylib
+     21    1.1%          /usr/lib/system/libsystem_platform.dylib
+     18    1.0%          /usr/lib/system/libsystem_malloc.dylib
+      9    0.5%          /usr/lib/system/libsystem_kernel.dylib
+      1    0.1%          /usr/lib/system/libdyld.dylib
+      1    0.1%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     14    0.8%    0.8%  LazyCompile: *resolve node:path:1091:10
+      2    0.1%    0.1%  LazyCompile: *normalizeString node:path:66:25
+      2    0.1%    0.1%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:640:37
+      2    0.1%    0.1%  Function: ^stat node:internal/modules/cjs/loader:151:14
+      1    0.1%    0.1%  RegExp: ^(?<protocol>[^/]+):\/\/(?:(?<username>[^:]*)(?::(?<password>[^@]*))?@)?(?<hosts>(?!:)[^/?@]*)(?<rest>.*)
+      1    0.1%    0.1%  LazyCompile: *realpathSync node:fs:2460:22
+      1    0.1%    0.1%  LazyCompile: *dirname node:path:1275:10
+      1    0.1%    0.1%  LazyCompile: *C node:internal/deps/cjs-module-lexer/dist/lexer:1:1152
+      1    0.1%    0.1%  Function: ^validateNumber node:internal/validators:124:24
+      1    0.1%    0.1%  Function: ^update /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology_description.js:139:11
+      1    0.1%    0.1%  Function: ^toString node:buffer:790:46
+      1    0.1%    0.1%  Function: ^readFileSync node:fs:459:22
+      1    0.1%    0.1%  Function: ^maybeCacheSourceMap node:internal/source_map/source_map_cache:80:29
+      1    0.1%    0.1%  Function: ^getOptions node:internal/fs/utils:318:20
+      1    0.1%    0.1%  Function: ^closeSync node:fs:535:19
+      1    0.1%    0.1%  Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1    0.1%    0.1%  Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1    0.1%    0.1%  Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    0.1%    0.1%  Function: ^Long /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/long.js:59:18
+      1    0.1%    0.1%  Function: ^FastBuffer node:internal/buffer:958:14
+      1    0.1%    0.1%  Function: *wasm-function[15]
+
+ [C++]:
+   ticks  total  nonlib   name
+    448   24.2%   26.7%  t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+    388   20.9%   23.1%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    206   11.1%   12.3%  T __kernelrpc_mach_port_get_context
+    152    8.2%    9.1%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    101    5.5%    6.0%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     90    4.9%    5.4%  T _host_get_special_port
+     65    3.5%    3.9%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     57    3.1%    3.4%  T _host_request_notification
+     43    2.3%    2.6%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     16    0.9%    1.0%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     16    0.9%    1.0%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     12    0.6%    0.7%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     12    0.6%    0.7%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.3%    0.4%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      4    0.2%    0.2%  T _mig_strncpy_zerofill
+      3    0.2%    0.2%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      3    0.2%    0.2%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.2%    0.2%  T _posix_spawn
+      1    0.1%    0.1%  t void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+      1    0.1%    0.1%  t std::__1::__hash_table<unsigned int, std::__1::hash<unsigned int>, std::__1::equal_to<unsigned int>, std::__1::allocator<unsigned int> >::__rehash(unsigned long)
+      1    0.1%    0.1%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::cares_wrap::(anonymous namespace)::AfterGetAddrInfo(uv_getaddrinfo_s*, int, addrinfo*)
+      1    0.1%    0.1%  t node::Environment::RunAndClearNativeImmediates(bool)::$_8::operator()(node::CallbackQueue<void, node::Environment*>*) const
+      1    0.1%    0.1%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::Buffer::(anonymous namespace)::Compare(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::i18n::ConverterObject::Decode(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::cares_wrap::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T _task_restartable_ranges_register
+      1    0.1%    0.1%  T _mach_msg_destroy
+
+ [Summary]:
+   ticks  total  nonlib   name
+     37    2.0%    2.2%  JavaScript
+   1638   88.4%   97.6%  C++
+     52    2.8%    3.1%  GC
+    174    9.4%          Shared libraries
+      4    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1502   99.8%   81.1%  t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      3    0.2%    0.2%  T _posix_spawn
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    448   24.2%  t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+    255   56.9%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     32   12.5%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      5   15.6%        Function: ^realpathSync node:fs:2460:22
+      3   60.0%          Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      2   66.7%            Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      1   33.3%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2   40.0%          Function: ^finalizeResolution node:internal/modules/esm/resolve:396:28
+      2  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:985:23
+      4   12.5%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      4  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      4  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      4   12.5%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      3   75.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      2   66.7%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1   33.3%            Function: ^trySelf node:internal/modules/cjs/loader:452:17
+      1   25.0%          Function: ^tryPackage node:internal/modules/cjs/loader:349:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2    6.3%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:499:36
+      2  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      1   50.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      1   50.0%            LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:673:31
+      2    6.3%        LazyCompile: ~isIPv6 node:internal/net:35:16
+      2  100.0%          LazyCompile: ~isIP node:internal/net:39:14
+      1   50.0%            LazyCompile: ~parseSslOptions /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:229:25
+      1   50.0%            LazyCompile: ~lookupAndConnect node:net:1076:26
+      2    6.3%        Function: ^splitRoot node:fs:2416:33
+      2  100.0%          LazyCompile: *realpathSync node:fs:2460:22
+      2  100.0%            Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      1    3.1%        LazyCompile: ~updateRsFromPrimary /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology_description.js:275:29
+      1  100.0%          LazyCompile: ~update /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology_description.js:139:11
+      1  100.0%            LazyCompile: ~serverUpdateHandler /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:360:24
+      1    3.1%        LazyCompile: ~setup /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/socket.io/node_modules/debug/src/common.js:7:15
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/socket.io/node_modules/debug/src/node.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    3.1%        LazyCompile: ~randomBytes node:internal/crypto/random:93:21
+      1  100.0%          LazyCompile: ~ObjectId.generate /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/objectid.js:135:34
+      1  100.0%            LazyCompile: ~ObjectId /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/objectid.js:24:22
+      1    3.1%        LazyCompile: ~merge /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/merge-descriptors/index.js:34:15
+      1  100.0%          LazyCompile: ~createApplication /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/express.js:37:27
+      1  100.0%            Script: ~<anonymous> file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/src/server.js:1:1
+      1    3.1%        LazyCompile: ~extendStatics /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/error.js:3:34
+      1  100.0%          LazyCompile: ~__extends /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/error.js:9:21
+      1  100.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/error.js:20:41
+      1    3.1%        LazyCompile: ~SemVer /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/node_modules/semver/classes/semver.js:8:15
+      1  100.0%          LazyCompile: ~parse /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/node_modules/semver/functions/parse.js:6:15
+      1  100.0%            LazyCompile: ~module.exports.evaluate /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:277:35
+      1    3.1%        LazyCompile: ~Kareem.filter /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/kareem/index.js:380:35
+      1  100.0%          LazyCompile: ~applyHooks /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/helpers/model/applyHooks.js:32:20
+      1  100.0%            LazyCompile: ~compile /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/model.js:4800:33
+      1    3.1%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/socket.io/dist/index.js:262:27
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~parserOnIncoming node:_http_server:880:26
+      1    3.1%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:23:36
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:1:1
+      1    3.1%        Function: ~<anonymous> node:constants:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1    3.1%        Function: ^encodePathChars node:internal/url:1457:25
+      1  100.0%          Function: ^pathToFileURL node:internal/url:1472:23
+      1  100.0%            Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+      1    3.1%        Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    3.1%        Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%            Function: ^allocate node:buffer:403:18
+     17    6.7%      LazyCompile: ~initGenrand file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:7:528
+     17  100.0%        LazyCompile: ~N file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:7:2589
+     17  100.0%          LazyCompile: ~ce file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:12:3381
+     17  100.0%            Script: ~<anonymous> file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/locale/es.mjs:1:1
+     11    4.3%      Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      5   45.5%        Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+      5  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      4   80.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1   20.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      3   27.3%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      3  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      3  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2   18.2%        Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      2  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      2  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    9.1%        Function: ^tryPackage node:internal/modules/cjs/loader:349:20
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      8    3.1%      LazyCompile: ~configSecureContext node:internal/tls/secure-context:124:29
+      7   87.5%        LazyCompile: ~createSecureContext node:_tls_common:103:29
+      7  100.0%          LazyCompile: ~connect node:_tls_wrap:1602:35
+      7  100.0%            LazyCompile: ~makeConnection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:248:24
+      1   12.5%        Function: ^createSecureContext node:_tls_common:103:29
+      1  100.0%          Function: ^connect node:_tls_wrap:1602:35
+      1  100.0%            Function: ^makeConnection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:248:24
+      6    2.4%      Function: ^URL node:internal/url:632:14
+      1   16.7%        LazyCompile: ~packageResolve node:internal/modules/esm/resolve:892:24
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:985:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1124:30
+      1   16.7%        LazyCompile: ~getSource node:internal/modules/esm/load:32:25
+      1  100.0%          LazyCompile: ~defaultLoad node:internal/modules/esm/load:72:27
+      1  100.0%            Function: ^ObjectDefineProperty.__proto__ node:internal/modules/esm/loader:150:5
+      1   16.7%        Function: ^validateArgs node:internal/modules/esm/loader:570:26
+      1  100.0%          Function: ^ObjectDefineProperty.__proto__ node:internal/modules/esm/loader:150:5
+      1  100.0%            Function: ^load node:internal/modules/esm/loader:559:13
+      1   16.7%        Function: ^load node:internal/modules/esm/loader:559:13
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1   16.7%        Function: ^getPackageScopeConfig node:internal/modules/esm/resolve:253:31
+      1  100.0%          Function: ^getPackageType node:internal/modules/esm/resolve:843:24
+      1  100.0%            Function: ^getFileProtocolModuleFormat node:internal/modules/esm/get_format:51:37
+      1   16.7%        Function: ^defaultResolve node:internal/modules/esm/resolve:1124:30
+      1  100.0%          Function: ^ObjectDefineProperty.__proto__ node:internal/modules/esm/loader:150:5
+      1  100.0%            Function: ^resolve node:internal/modules/esm/loader:791:16
+      5    2.0%      Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      5  100.0%        Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      5  100.0%          Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/bson.js:162:21
+      5  100.0%            Function: ^parse /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:578:10
+      4    1.6%      LazyCompile: *readPackageScope node:internal/modules/cjs/loader:332:26
+      2   50.0%        Function: ^trySelf node:internal/modules/cjs/loader:452:17
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2   50.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      2  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      4    1.6%      Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      4  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      4  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1   25.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/smart-buffer/build/smartbuffer.js:1:1
+      1   25.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/qs/lib/utils.js:1:1
+      1   25.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/utils.js:1:1
+      1   25.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/helpers/clone.js:1:1
+      3    1.2%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+      3  100.0%        LazyCompile: ~HI /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:238:12
+      3  100.0%          LazyCompile: ~continueScramConversation /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      3  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      3    1.2%      LazyCompile: ~TLSSocket.getPeerCertificate node:_tls_wrap:989:50
+      3  100.0%        LazyCompile: ~onConnectSecure node:_tls_wrap:1521:25
+      3  100.0%          Function: ^emit node:events:460:44
+      3  100.0%            LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:923:43
+      3    1.2%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1185:39
+      3  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      3  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      3    1.2%      LazyCompile: *resolve node:path:1091:10
+      2   66.7%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      2  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1   33.3%        LazyCompile: *readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%          Function: ^trySelf node:internal/modules/cjs/loader:452:17
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      3    1.2%      Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      2   66.7%        Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1   33.3%        Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      1  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:411:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      3    1.2%      Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      2   66.7%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      2  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1   33.3%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+     28    6.3%    Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+     24   85.7%      Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+     24  100.0%        Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/bson.js:162:21
+     24  100.0%          Function: ^parse /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:578:10
+     24  100.0%            Function: ^onMessage /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:159:14
+      4   14.3%      Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      3   75.0%        Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      3  100.0%          Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/bson.js:162:21
+      3  100.0%            Function: ^parse /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:578:10
+      1   25.0%        Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/bson.js:162:21
+      5    1.1%    Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      5  100.0%      Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      5  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      5  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      5  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+
+    388   20.9%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    388  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+    385   99.2%      Function: ^compileFunction node:vm:316:25
+    383   99.5%        Function: ^wrapSafe node:internal/modules/cjs/loader:1040:18
+    381   99.5%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+    367   96.3%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+     14    3.7%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+
+    206   11.1%  T __kernelrpc_mach_port_get_context
+
+    152    8.2%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    152  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+    150   98.7%      Function: ^readSync node:fs:699:18
+    150  100.0%        Function: ^tryReadSync node:fs:438:21
+    150  100.0%          Function: ^readFileSync node:fs:459:22
+    141   94.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      5    3.3%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      2    1.3%            LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1185:39
+      2    1.3%      LazyCompile: ~readSync node:fs:699:18
+      2  100.0%        LazyCompile: ~tryReadSync node:fs:438:21
+      2  100.0%          LazyCompile: ~readFileSync node:fs:459:22
+      2  100.0%            LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:194:34
+
+    101    5.5%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    101  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     79   78.2%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     61   77.2%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      8   13.1%          Function: ~<anonymous> node:crypto:1:1
+      8  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      7   11.5%          Function: ~<anonymous> node:http:1:1
+      7  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      6    9.8%          Function: ~<anonymous> node:tls:1:1
+      6  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    6.6%          Function: ~<anonymous> node:_http_client:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    4.9%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      3  100.0%            LazyCompile: ~get node:crypto:294:8
+      3    4.9%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:58:28
+      3  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:148:60
+      3    4.9%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    4.9%          Function: ~<anonymous> node:internal/child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    4.9%          Function: ~<anonymous> node:child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.3%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.3%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.3%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.3%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.3%          Function: ~<anonymous> node:_tls_common:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          LazyCompile: ~lazyLoadStreams node:fs:2893:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:3036:17
+      1    1.6%          LazyCompile: ~get node:dns:415:8
+      1  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    1.6%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          Function: ~<anonymous> node:https:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.6%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     16   20.3%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+     16  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+     16  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2    2.5%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      2  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1   50.0%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:254:58
+      1   50.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+     22   21.8%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     20   90.9%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      4   20.0%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      4  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      4   20.0%          Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3   15.0%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2   10.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    5.0%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:560:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    5.0%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    5.0%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    5.0%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    5.0%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    5.0%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    5.0%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    9.1%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+
+     90    4.9%  T _host_get_special_port
+     87   96.7%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     49   56.3%      LazyCompile: ~serverUpdateHandler /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:360:24
+     49  100.0%        Function: ^<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:520:53
+     49  100.0%          Function: ^emit node:events:460:44
+     49  100.0%            Function: ^<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:63:55
+     33   37.9%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:31:63
+     33  100.0%        LazyCompile: ~callback /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:261:31
+     33  100.0%          Function: ^connectHandler /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:305:28
+     33  100.0%            Function: ^onceWrapper node:events:622:21
+      3    3.4%      LazyCompile: ~lookupAndConnect node:net:1076:26
+      3  100.0%        LazyCompile: ~Socket.connect node:net:1018:36
+      3  100.0%          Function: ^connect node:_tls_wrap:1602:35
+      3  100.0%            Function: ^makeConnection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:248:24
+      2    2.3%      LazyCompile: ~listOnTimeout node:internal/timers:507:25
+      2  100.0%        Function: ^processTimers node:internal/timers:487:25
+
+     65    3.5%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     65  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     64   98.5%      Function: ^moduleStrategy node:internal/modules/esm/translators:114:56
+     64  100.0%        Function: ^moduleProvider node:internal/modules/esm/loader:459:28
+     64  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    1.5%      LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:114:56
+      1  100.0%        LazyCompile: ~moduleProvider node:internal/modules/esm/loader:459:28
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+
+     58    3.1%  /usr/lib/system/libsystem_pthread.dylib
+     56   96.6%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      4    7.1%      LazyCompile: ~createAppender /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:74:24
+      4  100.0%        LazyCompile: ~getAppender /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:59:21
+      4  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:139:41
+      4  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      3    5.4%      LazyCompile: ~onParseError node:internal/url:563:22
+      3  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      3  100.0%          Function: ^URL node:internal/url:632:14
+      3  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1124:30
+      2    3.6%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      2  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    3.6%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    3.6%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      2  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      2  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1    1.8%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            Function: ^<anonymous> node:internal/bootstrap/loaders:290:15
+      1    1.8%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1040:18
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:992:33
+      1    1.8%      LazyCompile: ~validate_config /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%        LazyCompile: ~exports.find /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bcrypt/bcrypt.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    1.8%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1    1.8%      LazyCompile: ~timestampLevelAndCategory /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/layouts.js:42:35
+      1  100.0%        LazyCompile: ~basicLayout /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/layouts.js:63:21
+      1  100.0%          LazyCompile: ~app /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/file.js:86:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/log4js.js:42:29
+      1    1.8%      LazyCompile: ~setupWebCrypto node:internal/bootstrap/pre_execution:196:24
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.8%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:168:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.8%      LazyCompile: ~session /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express-session/index.js:179:26
+      1  100.0%        LazyCompile: ~handle /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:280:64
+      1    1.8%      LazyCompile: ~realpathSync node:fs:2460:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1    1.8%      LazyCompile: ~query node:dns:289:17
+      1  100.0%        LazyCompile: ~resolveSRVRecord /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:45:26
+      1  100.0%          LazyCompile: ~connect /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/connect.js:8:17
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:130:52
+      1    1.8%      LazyCompile: ~p /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:10:11
+      1  100.0%        LazyCompile: ~parseScheme /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:555:65
+      1  100.0%          LazyCompile: ~URLStateMachine /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%            LazyCompile: ~module.exports.basicURLParse /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1    1.8%      LazyCompile: ~onConnectSecure node:_tls_wrap:1521:25
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:923:43
+      1  100.0%            LazyCompile: ~ssl.onhandshakedone node:_tls_wrap:728:27
+      1    1.8%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      1  100.0%        LazyCompile: ~construct node:internal/streams/destroy:225:19
+      1  100.0%          LazyCompile: ~Writable node:internal/streams/writable:220:18
+      1  100.0%            LazyCompile: ~WriteStream node:internal/fs/streams:311:21
+      1    1.8%      LazyCompile: ~module.exports /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/helpers/schematype/handleImmutable.js:9:26
+      1  100.0%        LazyCompile: ~SchemaType /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schematype.js:42:20
+      1  100.0%          LazyCompile: ~SchemaDate /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schema/date.js:25:20
+      1  100.0%            LazyCompile: ~Schema.interpretAsType /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schema.js:1065:44
+      1    1.8%      LazyCompile: ~initHooksExist node:internal/async_hooks:478:24
+      1  100.0%        LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      1  100.0%          LazyCompile: ~construct node:internal/streams/destroy:225:19
+      1  100.0%            LazyCompile: ~Writable node:internal/streams/writable:220:18
+      1    1.8%      LazyCompile: ~handle /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        LazyCompile: ~trim_prefix /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:280:64
+      1  100.0%            LazyCompile: ~process_params /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:338:47
+      1    1.8%      LazyCompile: ~formatRaw node:internal/util/inspect:828:19
+      1  100.0%        LazyCompile: ~formatValue node:internal/util/inspect:750:21
+      1  100.0%          LazyCompile: ~inspect node:internal/util/inspect:295:17
+      1  100.0%            LazyCompile: ~createAppender /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:74:24
+      1    1.8%      LazyCompile: ~defaultTriggerAsyncIdScope node:internal/async_hooks:455:36
+      1  100.0%        LazyCompile: ~emitLookup node:net:1133:46
+      1  100.0%          LazyCompile: ~onlookup node:dns:107:18
+      1    1.8%      LazyCompile: ~debug /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/debug/src/debug.js:65:17
+      1  100.0%        Function: ^Layer /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%          LazyCompile: ~use /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:439:25
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/application.js:224:24
+      1    1.8%      LazyCompile: ~createHttpErrorConstructor /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/http-errors/index.js:112:37
+      1  100.0%        Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/http-errors/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    1.8%      LazyCompile: ~construct node:internal/streams/destroy:225:19
+      1  100.0%        LazyCompile: ~Writable node:internal/streams/writable:220:18
+      1  100.0%          LazyCompile: ~WriteStream node:internal/fs/streams:311:21
+      1  100.0%            LazyCompile: ~WriteStream /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/graceful-fs/graceful-fs.js:320:24
+      1    1.8%      LazyCompile: ~connectHandler /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:305:28
+      1  100.0%        Function: ^onceWrapper node:events:622:21
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~onConnectSecure node:_tls_wrap:1521:25
+      1    1.8%      LazyCompile: ~connect /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:158:12
+      1  100.0%        LazyCompile: ~createTopology /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/connect.js:44:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/connect.js:32:67
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:72:39
+      1    1.8%      LazyCompile: ~compile /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/model.js:4800:33
+      1  100.0%        LazyCompile: ~Mongoose._model /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/index.js:569:37
+      1  100.0%          LazyCompile: ~Mongoose.model /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/index.js:506:36
+      1  100.0%            LazyCompile: ~MongoClass file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/src/contenedores/MongoClass.js:5:13
+      1    1.8%      LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:194:34
+      1  100.0%        LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:148:60
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    1.8%      LazyCompile: ~ce file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:12:3381
+      1  100.0%        Script: ~<anonymous> file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/locale/es.mjs:1:1
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.8%      LazyCompile: ~Stats node:internal/fs/utils:498:15
+      1  100.0%        LazyCompile: ~getStatsFromBinding node:internal/fs/utils:533:29
+      1  100.0%          LazyCompile: ~statSync node:fs:1580:18
+      1  100.0%            LazyCompile: ~tryStatSync node:internal/modules/esm/resolve:189:3
+      1    1.8%      LazyCompile: ~Socket.setKeepAlive node:net:548:41
+      1  100.0%        LazyCompile: ~makeConnection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:248:24
+      1  100.0%          LazyCompile: ~connect /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1  100.0%            LazyCompile: ~checkServer /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/monitor.js:143:21
+      1    1.8%      LazyCompile: ~Server /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/socket.io/dist/index.js:49:16
+      1  100.0%        Script: ~<anonymous> file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/src/server.js:1:1
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.8%      LazyCompile: ~SchemaType.required /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schematype.js:1006:41
+      1  100.0%        Function: ^SchemaType /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schematype.js:42:20
+      1  100.0%          Function: ^SchemaString /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schema/string.js:25:22
+      1  100.0%            LazyCompile: ~Schema.interpretAsType /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schema.js:1065:44
+      1    1.8%      LazyCompile: ~SchemaType /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schematype.js:42:20
+      1  100.0%        LazyCompile: ~SchemaDate /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schema/date.js:25:20
+      1  100.0%          LazyCompile: ~Schema.interpretAsType /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schema.js:1065:44
+      1  100.0%            LazyCompile: ~Schema.path /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schema.js:801:33
+      1    1.8%      LazyCompile: ~Schema /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/schema.js:95:16
+      1  100.0%        Script: ~<anonymous> file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/src/models/MessagesSchema.js:1:1
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.8%      LazyCompile: ~ReadableState node:internal/streams/readable:78:23
+      1  100.0%        LazyCompile: ~Readable node:internal/streams/readable:181:18
+      1  100.0%          LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%            LazyCompile: ~Socket node:net:294:16
+      1    1.8%      LazyCompile: ~Level /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/levels.js:16:14
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/levels.js:52:22
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            LazyCompile: ~addLevels /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/levels.js:49:19
+      1    1.8%      LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%        LazyCompile: ~Socket node:net:294:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:85:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1    1.8%      LazyCompile: ~<anonymous> node:path:1082:10
+      1  100.0%        LazyCompile: ~resolve node:path:1091:10
+      1  100.0%          LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    1.8%      LazyCompile: ~<anonymous> node:internal/modules/esm/translators:233:36
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:194:34
+      1  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:148:60
+      1    1.8%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/utils.js:464:18
+      1  100.0%        LazyCompile: ~collectionOperationCallback /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:164:54
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/utils.js:410:13
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/execute_operation.js:62:47
+      1    1.8%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/monitor.js:273:53
+      1  100.0%        LazyCompile: ~listOnTimeout node:internal/timers:507:25
+      1  100.0%          Function: ^processTimers node:internal/timers:487:25
+      1    1.8%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/indexes.js:106:52
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:271:27
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:210:101
+      1  100.0%            LazyCompile: ~handleOperationResult /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:333:42
+      1    1.8%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    1.8%      Function: ^wrapfunction /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/depd/index.js:413:23
+      1  100.0%        Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/request.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    1.8%      Function: ^onStreamRead node:internal/stream_base_commons:167:22
+
+     57    3.1%  T _host_request_notification
+     46   80.7%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      4    8.7%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1   25.0%        LazyCompile: ~module.exports.validate_package_json /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:46:48
+      1  100.0%          LazyCompile: ~validate_config /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%            LazyCompile: ~exports.find /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1   25.0%        LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:396:28
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:985:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1124:30
+      1   25.0%        LazyCompile: ~checkIsHttpToken node:_http_common:220:26
+      1  100.0%          LazyCompile: ~<anonymous> node:_http_outgoing:571:44
+      1  100.0%            LazyCompile: ~setHeader node:_http_outgoing:601:57
+      1   25.0%        Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/socket.io/dist/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    2.2%      LazyCompile: ~wrapfunction /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/depd/index.js:413:23
+      1  100.0%        Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/send/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    2.2%      LazyCompile: ~validate_config /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%        LazyCompile: ~exports.find /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bcrypt/bcrypt.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    2.2%      LazyCompile: ~validatePort node:internal/validators:220:22
+      1  100.0%        LazyCompile: ~lookupAndConnect node:net:1076:26
+      1  100.0%          LazyCompile: ~Socket.connect node:net:1018:36
+      1  100.0%            Function: ^connect node:_tls_wrap:1602:35
+      1    2.2%      LazyCompile: ~toString node:buffer:790:46
+      1  100.0%        LazyCompile: ~decode node:internal/encoding:412:11
+      1  100.0%          LazyCompile: ~stringify node:internal/modules/esm/translators:94:19
+      1  100.0%            LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:114:56
+      1    2.2%      LazyCompile: ~stringify node:internal/modules/esm/translators:94:19
+      1  100.0%        LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:114:56
+      1  100.0%          LazyCompile: ~moduleProvider node:internal/modules/esm/loader:459:28
+      1  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    2.2%      LazyCompile: ~set /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/application.js:359:23
+      1  100.0%        LazyCompile: ~defaultConfiguration /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/application.js:77:57
+      1  100.0%          LazyCompile: ~init /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/application.js:64:25
+      1  100.0%            LazyCompile: ~createApplication /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/express.js:37:27
+      1    2.2%      LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      1  100.0%        LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:673:31
+      1  100.0%          Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1    2.2%      LazyCompile: ~reset /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/lru-cache/index.js:128:9
+      1  100.0%        LazyCompile: ~LRUCache /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/lru-cache/index.js:28:15
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/node_modules/semver/classes/range.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    2.2%      LazyCompile: ~readableAddChunk node:internal/streams/readable:236:26
+      1  100.0%        Function: ^Readable.push node:internal/streams/readable:227:35
+      1  100.0%          LazyCompile: ~onStreamRead node:internal/stream_base_commons:167:22
+      1    2.2%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.2%      LazyCompile: ~patch /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/graceful-fs/polyfills.js:29:16
+      1  100.0%        LazyCompile: ~patch /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/graceful-fs/graceful-fs.js:102:16
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/graceful-fs/graceful-fs.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    2.2%      LazyCompile: ~parserOnIncoming node:_http_server:880:26
+      1  100.0%        LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1    2.2%      LazyCompile: ~parseAuthority /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:731:71
+      1  100.0%        LazyCompile: ~URLStateMachine /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%          LazyCompile: ~module.exports.basicURLParse /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%            LazyCompile: ~URLImpl /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1    2.2%      LazyCompile: ~onParseComplete node:internal/url:544:25
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          LazyCompile: ~URL node:internal/url:632:14
+      1  100.0%            LazyCompile: ~pathToFileURL node:internal/url:1472:23
+      1    2.2%      LazyCompile: ~onConnectSecure node:_tls_wrap:1521:25
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:923:43
+      1  100.0%            LazyCompile: ~ssl.onhandshakedone node:_tls_wrap:728:27
+      1    2.2%      LazyCompile: ~nop node:internal/streams/writable:73:13
+      1  100.0%        LazyCompile: ~afterWrite node:internal/streams/writable:489:20
+      1  100.0%          LazyCompile: ~onwrite node:internal/streams/writable:427:17
+      1  100.0%            LazyCompile: ~onWriteComplete node:internal/stream_base_commons:80:25
+      1    2.2%      LazyCompile: ~next /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:177:16
+      1  100.0%        LazyCompile: ~handle /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:136:31
+      1  100.0%          LazyCompile: ~router /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:46:18
+      1  100.0%            LazyCompile: ~handle /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/layer.js:86:49
+      1    2.2%      LazyCompile: ~getSource node:internal/modules/esm/load:32:25
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    2.2%      LazyCompile: ~get writeConcern /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/db.js:147:21
+      1  100.0%        LazyCompile: ~resolveOptions /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/utils.js:740:24
+      1  100.0%          LazyCompile: ~collection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/db.js:192:15
+      1  100.0%            LazyCompile: ~NativeCollection.onOpen /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:45:45
+      1    2.2%      LazyCompile: ~get totalConnectionCount /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:93:29
+      1  100.0%        LazyCompile: ~processWaitQueue /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:426:26
+      1  100.0%          Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.2%      LazyCompile: ~continueScramConversation /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1  100.0%          LazyCompile: ~onMessage /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:159:14
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:63:44
+      1    2.2%      LazyCompile: ~containsNamespace /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/depd/index.js:29:28
+      1  100.0%        LazyCompile: ~istraced /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/depd/index.js:169:19
+      1  100.0%          LazyCompile: ~depd /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/depd/index.js:103:15
+      1  100.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/send/index.js:1:1
+      1    2.2%      LazyCompile: ~connectionListenerInternal node:_http_server:471:36
+      1  100.0%        Function: ^defaultTriggerAsyncIdScope node:internal/async_hooks:455:36
+      1  100.0%          LazyCompile: ~connectionListener node:_http_server:465:28
+      1  100.0%            Function: ^emit node:events:460:44
+      1    2.2%      LazyCompile: ~configSecureContext node:internal/tls/secure-context:124:29
+      1  100.0%        LazyCompile: ~createSecureContext node:_tls_common:103:29
+      1  100.0%          LazyCompile: ~connect node:_tls_wrap:1602:35
+      1  100.0%            LazyCompile: ~makeConnection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:248:24
+      1    2.2%      LazyCompile: ~command /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:152:12
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:192:106
+      1  100.0%          LazyCompile: ~processWaitQueue /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:574:26
+      1  100.0%            LazyCompile: ~serverUpdateHandler /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:360:24
+      1    2.2%      LazyCompile: ~ce file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:12:3381
+      1  100.0%        Script: ~<anonymous> file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/locale/es.mjs:1:1
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    2.2%      LazyCompile: ~afterShutdown node:net:475:23
+      1    2.2%      LazyCompile: ~afterConnect node:net:1200:22
+      1    2.2%      LazyCompile: ~Socket._write node:net:885:35
+      1  100.0%        LazyCompile: ~writeOrBuffer node:internal/streams/writable:367:23
+      1  100.0%          LazyCompile: ~_write node:internal/streams/writable:285:16
+      1  100.0%            LazyCompile: ~Writable.write node:internal/streams/writable:335:36
+      1    2.2%      LazyCompile: ~ServerDescription /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server_description.js:34:16
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:63:55
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/monitor.js:204:52
+      1    2.2%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:1020:36
+      1    2.2%      LazyCompile: ~FileHandle node:internal/fs/promises:122:14
+      1  100.0%        Function: ^open node:internal/fs/promises:455:20
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    2.2%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/index.js:376:49
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:22
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            LazyCompile: ~promiseOrCallback /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/helpers/promiseOrCallback.js:8:44
+      1    2.2%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:130:52
+      1  100.0%        LazyCompile: ~maybePromise /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/utils.js:398:22
+      1  100.0%          LazyCompile: ~connect /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:126:12
+      1  100.0%            LazyCompile: ~connect /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:189:19
+      1    2.2%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:383:44
+      1  100.0%        LazyCompile: ~callback /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:128:44
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:152:83
+      1    2.2%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1  100.0%        LazyCompile: ~onMessage /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:159:14
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:63:44
+      1  100.0%            Function: ^emit node:events:460:44
+      1    2.2%      Function: ~<anonymous> node:os:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%            Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1    2.2%      Function: ~<anonymous> :1:20
+      1  100.0%        LazyCompile: ~developmentFormatLine /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/morgan/index.js:183:53
+      1  100.0%          LazyCompile: ~logRequest /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/morgan/index.js:116:25
+      1  100.0%            LazyCompile: ~listener /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/morgan/node_modules/on-finished/index.js:161:20
+      1    2.2%      Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/readable-stream/errors.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    2.2%      Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/moment/moment.js:11:19
+      1  100.0%        Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/moment/moment.js:7:12
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/moment/moment.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    2.2%      Function: ^onMessage /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:159:14
+      1  100.0%        Function: ^<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:63:44
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            Function: ^processIncomingData /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1    2.2%      Function: ^emit node:events:460:44
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:57:31
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~checkServer /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/monitor.js:143:21
+
+     43    2.3%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     43  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     39   90.7%      Function: ^read node:internal/modules/package_json_reader:16:14
+     32   82.1%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+     27   84.4%          Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+     27  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      5   15.6%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      4   80.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1   20.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      5   12.8%        Function: ^getPackageConfig node:internal/modules/esm/resolve:197:26
+      3   60.0%          Function: ^packageResolve node:internal/modules/esm/resolve:892:24
+      3  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:985:23
+      2   40.0%          LazyCompile: ~packageResolve node:internal/modules/esm/resolve:892:24
+      2  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:985:23
+      2    5.1%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:301:21
+      2  100.0%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      2  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      4    9.3%      LazyCompile: ~read node:internal/modules/package_json_reader:16:14
+      3   75.0%        LazyCompile: ~getPackageConfig node:internal/modules/esm/resolve:197:26
+      3  100.0%          LazyCompile: ~packageResolve node:internal/modules/esm/resolve:892:24
+      3  100.0%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:985:23
+      1   25.0%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:301:21
+      1  100.0%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%            LazyCompile: ~shouldUseESMLoader node:internal/modules/run_main:30:28
+
+     43    2.3%  /usr/lib/system/libsystem_c.dylib
+     41   95.3%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      3    7.3%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      3  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      3  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/debug/src/node.js:1:1
+      3  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      2    4.9%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1   50.0%        LazyCompile: ~getStack /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/depd/index.js:381:19
+      1  100.0%          LazyCompile: ~depd /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/depd/index.js:103:15
+      1  100.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/body-parser/index.js:1:1
+      1   50.0%        Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      2    4.9%      LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:237:26
+      2  100.0%        LazyCompile: ~makeConnection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:248:24
+      2  100.0%          LazyCompile: ~connect /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:30:17
+      2  100.0%            LazyCompile: ~checkServer /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/monitor.js:143:21
+      2    4.9%      LazyCompile: ~createAppender /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:74:24
+      2  100.0%        LazyCompile: ~getAppender /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:59:21
+      2  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:139:41
+      2  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    2.4%      LazyCompile: ~value node:internal/console/constructor:230:20
+      1  100.0%        LazyCompile: ~initializeGlobalConsole node:internal/console/constructor:687:33
+      1  100.0%          LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    2.4%      LazyCompile: ~validate /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/aproba/index.js:25:19
+      1  100.0%        LazyCompile: ~module.exports /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/gauge/plumbing.js:6:42
+      1  100.0%          LazyCompile: ~Gauge /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/gauge/index.js:19:16
+      1  100.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/npmlog/log.js:1:1
+      1    2.4%      LazyCompile: ~toV node:_tls_common:66:13
+      1  100.0%        LazyCompile: ~SecureContext node:_tls_common:79:23
+      1  100.0%          LazyCompile: ~createSecureContext node:_tls_common:103:29
+      1  100.0%            LazyCompile: ~connect node:_tls_wrap:1602:35
+      1    2.4%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1    2.4%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:168:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%      LazyCompile: ~resOnFinish node:_http_server:816:21
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          LazyCompile: ~onFinish node:_http_outgoing:907:18
+      1  100.0%            LazyCompile: ~callback node:internal/streams/writable:552:44
+      1    2.4%      LazyCompile: ~realpathSync node:fs:2460:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1    2.4%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%      LazyCompile: ~parseOptions /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:204:22
+      1  100.0%        LazyCompile: ~MongoClient /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%          LazyCompile: ~connect /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:189:19
+      1  100.0%            LazyCompile: ~MongoStore /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/connect-mongo/build/main/lib/MongoStore.js:75:16
+      1    2.4%      LazyCompile: ~onParseError node:internal/url:563:22
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          Function: ^URL node:internal/url:632:14
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1124:30
+      1    2.4%      LazyCompile: ~nextHookFactory node:internal/modules/esm/loader:116:25
+      1  100.0%        LazyCompile: ~resolve node:internal/modules/esm/loader:791:16
+      1  100.0%          LazyCompile: ~getModuleJob node:internal/modules/esm/loader:417:21
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/modules/esm/module_job:75:41
+      1    2.4%      LazyCompile: ~multiplication32 file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:7:419
+      1  100.0%        LazyCompile: ~initGenrand file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:7:528
+      1  100.0%          LazyCompile: ~N file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:7:2589
+      1  100.0%            LazyCompile: ~ce file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:12:3381
+      1    2.4%      LazyCompile: ~makeFirstMessage /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:61:26
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:25:32
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/crypto/random:107:43
+      1  100.0%            LazyCompile: ~onJobDone node:internal/crypto/random:302:19
+      1    2.4%      LazyCompile: ~initRead node:_tls_wrap:442:18
+      1  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.4%      LazyCompile: ~fromObject node:buffer:500:20
+      1  100.0%        LazyCompile: ~from node:buffer:301:28
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/ws/lib/permessage-deflate.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    2.4%      LazyCompile: ~forEachCode /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/http-errors/index.js:259:38
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          LazyCompile: ~populateConstructorExports /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/http-errors/index.js:258:37
+      1  100.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/http-errors/index.js:1:1
+      1    2.4%      LazyCompile: ~error /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/send/index.js:267:45
+      1  100.0%        LazyCompile: ~onStatError /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/send/index.js:412:57
+      1  100.0%          LazyCompile: ~next /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/send/index.js:728:17
+      1  100.0%            LazyCompile: ~onstat /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/send/index.js:717:33
+      1    2.4%      LazyCompile: ~deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%        LazyCompile: ~deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/bson.js:162:21
+      1  100.0%          LazyCompile: ~parse /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:374:10
+      1  100.0%            LazyCompile: ~onMessage /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:159:14
+      1    2.4%      LazyCompile: ~attach /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/engine.io/build/engine.io.js:51:16
+      1  100.0%        LazyCompile: ~initEngine /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/socket.io/dist/index.js:240:15
+      1  100.0%          LazyCompile: ~attach /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/socket.io/dist/index.js:159:11
+      1  100.0%            LazyCompile: ~Server /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/socket.io/dist/index.js:49:16
+      1    2.4%      LazyCompile: ~_copy node:buffer:205:15
+      1  100.0%        Function: ^copy node:buffer:782:16
+      1  100.0%          Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            LazyCompile: ~deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1    2.4%      LazyCompile: ~Server /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:28:16
+      1  100.0%        LazyCompile: ~createAndConnectServer /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:514:32
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:177:57
+      1  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    2.4%      LazyCompile: ~Route /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/route.js:43:15
+      1  100.0%        LazyCompile: ~route /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:502:29
+      1  100.0%          LazyCompile: ~proto.<computed> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:519:27
+      1  100.0%            Script: ~<anonymous> file:///Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/src/routes/cartRoutes/CartRoutes.js:1:1
+      1    2.4%      LazyCompile: ~Binary /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/binary.js:19:20
+      1  100.0%        Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    2.4%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/URL.js:378:56
+      1  100.0%        LazyCompile: ~getSameObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/utils.js:65:23
+      1  100.0%          LazyCompile: ~get searchParams /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/whatwg-url/lib/URL.js:371:21
+      1  100.0%            LazyCompile: ~ConnectionString /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb-connection-string-url/lib/index.js:82:16
+      1    2.4%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%        LazyCompile: ~prepareHandshakeDocument /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:146:34
+      1  100.0%          LazyCompile: ~performInitialHandshake /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1    2.4%      Function: ~<instance_members_initializer> node:internal/util/iterable_weak_map:17:3
+      1  100.0%        LazyCompile: ~IterableWeakMap node:internal/util/iterable_weak_map:16:1
+      1  100.0%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    2.4%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    2.4%      Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/normalizr/dist/normalizr.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    2.4%      Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/graceful-fs/graceful-fs.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    2.4%      Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    2.4%      Function: ^onceWrapper node:events:622:21
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          LazyCompile: ~completeEndSession /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sessions.js:138:40
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sessions.js:133:52
+      1    2.4%      Function: ^allocate node:buffer:403:18
+      1  100.0%        Function: ^allocUnsafe node:buffer:378:42
+      1  100.0%          Function: ^tryCreateBuffer node:fs:423:25
+      1  100.0%            Function: ^readFileSync node:fs:459:22
+
+     23    1.2%  /usr/lib/libc++.1.dylib
+     20   87.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    5.0%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%        Function: ^<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/helpers/pluralize.js:86:34
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            LazyCompile: ~pluralize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/helpers/pluralize.js:82:19
+      1    5.0%      LazyCompile: ~urlParse node:url:151:18
+      1  100.0%        LazyCompile: ~validate_config /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%          LazyCompile: ~exports.find /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bcrypt/bcrypt.js:1:1
+      1    5.0%      LazyCompile: ~realpathSync node:fs:2460:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1    5.0%      LazyCompile: ~pushAsyncContext node:internal/async_hooks:539:26
+      1  100.0%        LazyCompile: ~emitBeforeScript node:internal/async_hooks:509:26
+      1  100.0%          LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    5.0%      LazyCompile: ~peek /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/utils.js:873:9
+      1  100.0%        LazyCompile: ~processIncomingData /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1  100.0%          LazyCompile: ~_write /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1  100.0%            LazyCompile: ~writeOrBuffer node:internal/streams/writable:367:23
+      1    5.0%      LazyCompile: ~onMessage /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:159:14
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:63:44
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~processIncomingData /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1    5.0%      LazyCompile: ~makeDocumentSegment /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:523:24
+      1  100.0%        LazyCompile: ~toBin /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:497:10
+      1  100.0%          LazyCompile: ~writeCommand /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1  100.0%            LazyCompile: ~write /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:462:15
+      1    5.0%      LazyCompile: ~isSDAMUnrecoverableError /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/error.js:766:34
+      1  100.0%        LazyCompile: ~handleOperationResult /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:333:42
+      1  100.0%          LazyCompile: ~onMessage /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:159:14
+      1  100.0%            Function: ^<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:63:44
+      1    5.0%      LazyCompile: ~isFunction /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/moment/moment.js:347:24
+      1  100.0%        LazyCompile: ~addRegexToken /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/moment/moment.js:797:27
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/moment/moment.js:11:19
+      1  100.0%            Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/moment/moment.js:7:12
+      1    5.0%      LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%        LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1  100.0%          LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:237:26
+      1  100.0%            LazyCompile: ~makeConnection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:248:24
+      1    5.0%      LazyCompile: ~expressInit /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%        LazyCompile: ~handle /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/express/lib/router/index.js:280:64
+      1    5.0%      LazyCompile: ~deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%        LazyCompile: ~deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/bson.js:162:21
+      1    5.0%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%          Function: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1    5.0%      LazyCompile: ~checkTLSOptions /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:125:25
+      1  100.0%        LazyCompile: ~parseOptions /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:204:22
+      1  100.0%          LazyCompile: ~MongoClient /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%            LazyCompile: ~connect /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:189:19
+      1    5.0%      LazyCompile: ~_copy node:buffer:205:15
+      1  100.0%        LazyCompile: ~copy node:buffer:782:16
+      1  100.0%          LazyCompile: ~serialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/bson.js:111:19
+      1  100.0%            LazyCompile: ~toBin /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:82:10
+      1    5.0%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%        LazyCompile: ~maybePromise /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/utils.js:398:22
+      1  100.0%          LazyCompile: ~executeOperation /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1  100.0%            LazyCompile: ~createCollection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/db.js:153:21
+      1    5.0%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/create_collection.js:75:28
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          LazyCompile: ~executeWithoutEncryptedFieldsCheck /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/create_collection.js:74:39
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/create_collection.js:39:10
+      1    5.0%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:88:44
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:72:39
+      1  100.0%            LazyCompile: ~onresolve node:dns:273:19
+      1    5.0%      LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/graceful-fs/graceful-fs.js:329:53
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/graceful-fs/graceful-fs.js:357:50
+      1  100.0%          LazyCompile: ~<anonymous> node:fs:196:10
+      1    5.0%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+
+     21    1.1%  /usr/lib/system/libsystem_platform.dylib
+     17   81.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    5.9%      LazyCompile: ~updateServers /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:528:23
+      1  100.0%        LazyCompile: ~serverUpdateHandler /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:360:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:520:53
+      1  100.0%            Function: ^emit node:events:460:44
+      1    5.9%      LazyCompile: ~stringify node:internal/modules/esm/translators:94:19
+      1  100.0%        LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:114:56
+      1  100.0%          LazyCompile: ~moduleProvider node:internal/modules/esm/loader:459:28
+      1  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    5.9%      LazyCompile: ~nopt /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/nopt/lib/nopt.js:26:15
+      1  100.0%        LazyCompile: ~parseOpts /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:144:37
+      1  100.0%          LazyCompile: ~Run /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:78:13
+      1  100.0%            LazyCompile: ~exports.find /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    5.9%      LazyCompile: ~module.exports.modifyConfig /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/adapters.js:45:31
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:113:5
+      1  100.0%          LazyCompile: ~onlyOnMaster /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/clustering.js:87:17
+      1  100.0%            LazyCompile: ~createAppender /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:74:24
+      1    5.9%      LazyCompile: ~maybePromise /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/utils.js:398:22
+      1  100.0%        LazyCompile: ~executeOperation /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1  100.0%          LazyCompile: ~createCollection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/db.js:153:21
+      1  100.0%            LazyCompile: ~createCollection /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongoose/lib/connection.js:400:82
+      1    5.9%      LazyCompile: ~isDate /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/utils.js:82:16
+      1  100.0%        LazyCompile: ~serializeInto /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%          LazyCompile: ~serialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/bson.js:111:19
+      1  100.0%            LazyCompile: ~toBin /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:82:10
+      1    5.9%      LazyCompile: ~get node:internal/url:327:6
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:72:39
+      1  100.0%          LazyCompile: ~onresolve node:dns:273:19
+      1    5.9%      LazyCompile: ~get node:internal/modules/esm/module_map:18:6
+      1  100.0%        LazyCompile: ~getModuleJob node:internal/modules/esm/loader:417:21
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    5.9%      LazyCompile: ~formatValue node:internal/util/inspect:750:21
+      1  100.0%        LazyCompile: ~formatProperty node:internal/util/inspect:1883:24
+      1  100.0%          LazyCompile: ~formatRaw node:internal/util/inspect:828:19
+      1  100.0%            LazyCompile: ~formatValue node:internal/util/inspect:750:21
+      1    5.9%      LazyCompile: ~executeAndReschedule /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/utils.js:702:34
+      1  100.0%        LazyCompile: ~listOnTimeout node:internal/timers:507:25
+      1  100.0%          LazyCompile: ~processTimers node:internal/timers:487:25
+      1    5.9%      LazyCompile: ~command /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:254:12
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/server.js:204:42
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:269:23
+      1  100.0%            LazyCompile: ~processWaitQueue /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:426:26
+      1    5.9%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1185:39
+      1  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      1    5.9%      Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      1    5.9%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    5.9%      Function: ^update /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology_description.js:139:11
+      1  100.0%        Function: ^serverUpdateHandler /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:360:24
+      1  100.0%          Function: ^<anonymous> /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:520:53
+      1  100.0%            Function: ^emit node:events:460:44
+      1    5.9%      Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%        Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          Function: ^deserializeObject /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            Function: ^deserialize /Users/fabiandominguez/Documents/Tomy/Programacion/CoderHouse/BackEnd/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1    5.9%      Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+
